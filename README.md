@@ -10,5 +10,8 @@ sudo python setup.py install
 # Use
 Open terminal and enter
 ```inshorts``` from any directory.
+
+# Screenshots
+![screenshot database](https://raw.githubusercontent.com/feat7/inshorts/master/screen.png)
 # Licence
 The MIT Licence
