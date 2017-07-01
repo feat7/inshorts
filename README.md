@@ -13,5 +13,5 @@ Open terminal and enter
 
 # Screenshots
 ![screenshot database](https://raw.githubusercontent.com/feat7/inshorts/master/screenshot.png)
-# Licence
-The MIT Licence
+# License
+The MIT License
