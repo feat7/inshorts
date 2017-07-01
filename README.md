@@ -12,6 +12,6 @@ Open terminal and enter
 ```inshorts``` from any directory.
 
 # Screenshots
-![screenshot database](https://raw.githubusercontent.com/feat7/inshorts/master/screen.png)
+![screenshot database](https://raw.githubusercontent.com/feat7/inshorts/master/screenshot.png)
 # Licence
 The MIT Licence
