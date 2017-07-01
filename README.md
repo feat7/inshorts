@@ -1,5 +1,9 @@
 # inshorts
 Short news right into terminal!
+# Requirements
+- python 3
+- BeautifulSoup4
+
 # Installation
 ```
 git clone https://github.com/feat7/inshorts.git
