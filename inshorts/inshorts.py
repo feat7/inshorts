@@ -42,10 +42,15 @@ def main():
 
 	for i in range(0,25):
 		if i%2 == 0:
-			print(bcolors.BOLD + str(i+1) + '. ' + bcolors.FAIL + headlines[i].get_text() + bcolors.ENDC + '\n')
+            try:
+    			print(bcolors.BOLD + str(i+1) + '. ' + bcolors.FAIL + headlines[i].get_text() + bcolors.ENDC + '\n')
+            except IndexError:
+                pass
 		else:
-			print(bcolors.BOLD + str(i+1) + '. ' + bcolors.OKGREEN + headlines[i].get_text() + bcolors.ENDC + '\n')
-
+            try:
+    			print(bcolors.BOLD + str(i+1) + '. ' + bcolors.OKGREEN + headlines[i].get_text() + bcolors.ENDC + '\n')
+            except IndexError:
+                pass
 	select_news(content_list)
 
 
