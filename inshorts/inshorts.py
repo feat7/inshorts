@@ -16,43 +16,43 @@ class bcolors:
 
 
 def select_news(content_list):
-	try:
-		news = input('Enter news number: ')
-		news = int(news)-1
+    try:
+        news = input('Enter news number: ')
+        news = int(news)-1
 
-		print('\n' + bcolors.WARNING + content_list[news].get_text() + bcolors.ENDC)
+        print('\n' + bcolors.WARNING + content_list[news].get_text() + bcolors.ENDC)
 
-		select_news(content_list)
+        select_news(content_list)
 
-	except KeyboardInterrupt:
-		pass
+    except KeyboardInterrupt:
+        pass
 
 
 def main():
-	with request.urlopen('https://inshorts.com/en/read') as response:
-	   html = response.read()
+    with request.urlopen('https://inshorts.com/en/read') as response:
+        html = response.read()
 
-	soup = BeautifulSoup(html, 'lxml')
+    soup = BeautifulSoup(html, 'lxml')
 
-	print("----------------------Connected!----------------------------------")
+    print("----------------------Connected!----------------------------------")
 
 
-	headlines = soup.select('span[itemprop=headline]')
-	content_list = soup.select('div[itemprop=articleBody]')
+    headlines = soup.select('span[itemprop=headline]')
+    content_list = soup.select('div[itemprop=articleBody]')
 
-	for i in range(0,25):
-		if i%2 == 0:
+    for i in range(0,25):
+        if i%2 == 0:
             try:
-    			print(bcolors.BOLD + str(i+1) + '. ' + bcolors.FAIL + headlines[i].get_text() + bcolors.ENDC + '\n')
+                print(bcolors.BOLD + str(i+1) + '. ' + bcolors.FAIL + headlines[i].get_text() + bcolors.ENDC + '\n')
             except IndexError:
                 pass
-		else:
+        else:
             try:
-    			print(bcolors.BOLD + str(i+1) + '. ' + bcolors.OKGREEN + headlines[i].get_text() + bcolors.ENDC + '\n')
+                print(bcolors.BOLD + str(i+1) + '. ' + bcolors.OKGREEN + headlines[i].get_text() + bcolors.ENDC + '\n')
             except IndexError:
                 pass
-	select_news(content_list)
+    select_news(content_list)
 
 
 if __name__ == '__main__':
-	main()
+    main()
