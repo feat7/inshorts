@@ -15,6 +15,9 @@ sudo python setup.py install
 Open terminal and enter
 ```inshorts``` from any directory.
 
+# Don't use
+This repo is built for learning purpose only. Read TOS of the sites you scrape. Make sure you follow them.
+
 # Screenshots
 ![screenshot database](https://raw.githubusercontent.com/feat7/inshorts/master/screenshot.png)
 # License
